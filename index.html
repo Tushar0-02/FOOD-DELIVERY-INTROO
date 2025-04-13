@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - HungerGame</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <style>
+    /* Reset & Base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #1e1e2f, #2e857f);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+      font-size: 2rem;
+      background-color: rgba(0, 0, 0, 0.2);
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .container {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .login-box {
+      background-color: #2a2a3f;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0, 255, 180, 0.2);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .login-key {
+      font-size: 3rem;
+      text-align: center;
+      color: #27EF9F;
+      margin-bottom: 10px;
+    }
+
+    .login-title {
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin-bottom: 25px;
+      color: #ccc;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-control-label {
+      display: block;
+      margin-bottom: 5px;
+      color: #aaa;
+      font-weight: 500;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      background-color: #1e1e2f;
+      color: #fff;
+      outline: none;
+    }
+
+    .form-control:focus {
+      border: 2px solid #27EF9F;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 12px;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: 10px;
+    }
+
+    .btn-outline-primary {
+      background: none;
+      border: 2px solid #27EF9F;
+      color: #27EF9F;
+    }
+
+    .btn-outline-primary:hover {
+      background-color: #27EF9F;
+      color: #1e1e2f;
+    }
+
+    .btn-outline-secondary {
+      background: none;
+      border: 2px solid #ccc;
+      color: #ccc;
+    }
+
+    .btn-outline-secondary:hover {
+      background-color: #ccc;
+      color: #1e1e2f;
+    }
+
+    .error-text {
+      color: #ff6b6b;
+      text-align: center;
+      margin-top: -10px;
+      margin-bottom: 10px;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+      background-color: rgba(0, 0, 0, 0.2);
+      color: #aaa;
+    }
+
+    @media (max-width: 500px) {
+      .login-box {
+        padding: 20px;
+      }
+
+      header {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    fOODY
+  </header>
+
+  <div class="container">
+    <div class="login-box">
+      <div class="login-key">
+        <i class="fa fa-key" aria-hidden="true"></i>
+      </div>
+      <div class="login-title">From People To People</div>
+
+      <form onsubmit="login(event)">
+        <div class="form-group">
+          <label class="form-control-label">EMAIL</label>
+          <input type="email" id="email" class="form-control" required />
+        </div>
+        <div class="form-group">
+          <label class="form-control-label">PASSWORD</label>
+          <input type="password" id="password" class="form-control" required />
+        </div>
+        <p id="error-message" class="error-text"></p>
+        <button type="submit" class="btn btn-outline-primary">LOGIN</button>
+      </form>
+
+      <a href="register.html">
+        <button type="button" class="btn btn-outline-secondary">REGISTER</button>
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 fOODY CREATED BY NEXTIN  x  INTROO+. All rights reserved.
+  </footer>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>

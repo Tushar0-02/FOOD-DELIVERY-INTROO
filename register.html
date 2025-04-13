@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register - HungerGame</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #1e1e2f, #2e857f);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+      font-size: 2rem;
+      background-color: rgba(0, 0, 0, 0.2);
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .container {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .login-box {
+      background-color: #2a2a3f;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0, 255, 180, 0.2);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .login-key {
+      font-size: 3rem;
+      text-align: center;
+      color: #27EF9F;
+      margin-bottom: 10px;
+    }
+
+    .login-title {
+      text-align: center;
+      font-size: 1.3rem;
+      font-weight: 500;
+      margin-bottom: 25px;
+      color: #ccc;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="password"] {
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      background-color: #1e1e2f;
+      color: #fff;
+      outline: none;
+    }
+
+    input:focus {
+      border: 2px solid #27EF9F;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 12px;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: 5px;
+    }
+
+    .btn-outline-primary {
+      background: none;
+      border: 2px solid #27EF9F;
+      color: #27EF9F;
+    }
+
+    .btn-outline-primary:hover {
+      background-color: #27EF9F;
+      color: #1e1e2f;
+    }
+
+    .error-text {
+      color: #ff6b6b;
+      text-align: center;
+      margin-top: 10px;
+      font-size: 0.9rem;
+    }
+
+    p {
+      margin-top: 15px;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    p a {
+      color: #27EF9F;
+      text-decoration: none;
+    }
+
+    p a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+      background-color: rgba(0, 0, 0, 0.2);
+      color: #aaa;
+    }
+
+    @media (max-width: 500px) {
+      .login-box {
+        padding: 20px;
+      }
+
+      header {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    FOODY REGISTER
+  </header>
+
+  <div class="container">
+    <div class="login-box">
+      <div class="login-key">
+        <i class="fa fa-user-plus"></i>
+      </div>
+      <div class="login-title">Create an Account</div>
+
+      <form id="register-form">
+        <input type="text" id="username" placeholder="Username" required />
+        <input type="email" id="register-email" placeholder="Email" required />
+        <input type="tel" id="phone" placeholder="Phone Number" required />
+        <input type="password" id="register-password" placeholder="Password" required />
+        <button type="submit" class="btn btn-outline-primary">REGISTER</button>
+      </form>
+
+      <p>Already have an account? <a href="index.html">Login Here</a></p>
+      <p id="register-error-message" class="error-text"></p>
+    </div>
+  </div>
+
+  <footer>&copy; 2025 FOODY.  CREATED BY  NEXTIN x INTROO+ All rights reserved.</footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/9.6.1/firebase-app.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/9.6.1/firebase-auth.js"></script>
+  <script type="module" src="register.js"></script>
+</body>
+</html>
